@@ -16,12 +16,12 @@ l1 = [2, 4, 6, 8, 10]
 l2 = [1, 2, 3]
 """
 
-l1 = [1, 4, 5]
-l2 = [1, 3, 5, 7]
-if len(l2) < len(l1):
-    l2.append(0)
-elif len(l1) < len(l2):
-    l1.append(0)
-list_length = len(l1)
-list_target = [l1[i] + (l2[i]/10) for i in range(list_length)]
+l1 = [2, 4, 6, 8, 10]
+l2 = [1, 2, 3]
+l2 = l2 + [0] * (len(l1) - len(l2)) if len(l2) < len(l1) else l2
+l1 = l1 + [0] * (len(l2) - len(l1)) if len(l1) < len(l2) else l1
+list_target = [l1[i] + (l2[i]/10) for i in range(len(l1))]
 print(list_target)
+# ____control_line_2_____
+
+

@@ -20,8 +20,8 @@ l1 = [2, 4, 6, 8, 10]
 l2 = [1, 2, 3]
 l2 = l2 + [0] * (len(l1) - len(l2)) if len(l2) < len(l1) else l2
 l1 = l1 + [0] * (len(l2) - len(l1)) if len(l1) < len(l2) else l1
-list_target = [l1[i] + (l2[i]/10) for i in range(len(l1))]
+list_target = [(l1[i], l2[i]) for i in range(len(l1))]
 print(list_target)
-# ____control_line_2_____
+# ____control_line_3_____
 
 
